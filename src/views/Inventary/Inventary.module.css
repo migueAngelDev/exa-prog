@@ -60,6 +60,7 @@
 .listHeader {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  align-items: center;
 }
 
 .data li span {
@@ -95,7 +96,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 620px;
+  max-width: 620px;
+  width: 90%;
   padding: 20px;
   height: 90vh;
   max-height: 1000px;
@@ -145,9 +147,18 @@
 @media (max-width: 1030px) {
   .sectionContainerData {
     margin: 0;
+    margin-top: 100px;
   }
 
   .wrapperContent {
     width: 100%;
+  }
+
+  .data li span {
+    padding: 10px;
+  }
+
+  .listHeader {
+    padding: 0;
   }
 }

@@ -64,8 +64,33 @@
   cursor: pointer;
 }
 
+.headerMediaQ {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80px;
+  background-color: #000;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  position: fixed;
+  z-index: 1;
+}
+
+.headerMediaQ {
+  display: none;
+}
+
 @media (max-width: 1030px) {
   .wrapper {
     display: none;
+  }
+  .showSidebar {
+    display: flex;
+    max-width: 100%;
+  }
+
+  .headerMediaQ {
+    display: flex;
   }
 }

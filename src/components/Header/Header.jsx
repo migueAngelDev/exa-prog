@@ -7,6 +7,7 @@ import IconTwitter from "../../../public/icons/twitter.svg";
 import IconRegister from "../../../public/icons/Register.svg";
 import { Button } from "@mui/material";
 import Link from "next/link";
+import { useState } from "react";
 
 const Header = () => {
   const socialMediaLinks = [
@@ -36,11 +37,21 @@ const Header = () => {
     );
   });
 
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleOpenMenu = () => setShowMenu(true);
+  const handleCloseMenu = () => setShowMenu(false);
+  // console.log(showMenu);
+
   return (
     <>
-      <aside className={styles.wrapper}>
+      <header className={`${styles.headerMediaQ} ${styles.headerMediaQBar}`}>
+        <IconVercel onClick={handleOpenMenu} />
+        <h2>Vercel</h2>
+      </header>
+      <aside className={`${styles.wrapper} ${showMenu && styles.showSidebar}`}>
         <header className={styles.header}>
-          <IconVercel />
+          <IconVercel onClick={handleCloseMenu} />
           <h1>Vercel</h1>
         </header>
         <section>
