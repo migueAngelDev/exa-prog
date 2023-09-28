@@ -7,10 +7,7 @@ import IconDelete from "../../../public/icons/l.svg";
 import { Box, Button, Modal, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 
-//TODO: eliminar por id
-
 //TODO: Hacer responsive el sidebar
-//TODO: Desplegar el sitio web en vercel
 
 const Inventary = () => {
   const [formDataAddProduct, setFormDataAddProduct] = useState({
@@ -22,10 +19,14 @@ const Inventary = () => {
   });
 
   const [dataList, setDataList] = useState([]);
+  const [dataListTotal, setDataListTotal] = useState([]);
 
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem("products")) || [];
+    const savedDataTotal =
+      JSON.parse(localStorage.getItem("productsTotal")) || [];
     setDataList(savedData);
+    setDataListTotal(savedDataTotal);
   }, []);
 
   const handleOnChange = (field, value) => {
@@ -121,7 +122,9 @@ const Inventary = () => {
       };
       const updateDataList = [...dataList, data];
       setDataList(updateDataList);
+      setDataListTotal(updateDataList);
       localStorage.setItem("products", JSON.stringify(updateDataList));
+      localStorage.setItem("productsTotal", JSON.stringify(updateDataList));
 
       setFormDataAddProduct({
         id: idLatest() || formDataAddProduct.id,

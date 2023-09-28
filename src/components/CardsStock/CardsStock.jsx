@@ -2,8 +2,28 @@ import styles from "@/components/CardsStock/CardsStock.module.css";
 import IconDel from "../../../public/icons/Del.svg";
 import IconItems from "../../../public/icons/Items.svg";
 import { Button } from "@mui/material";
+import { useEffect, useState } from "react";
 
 const CardsStock = () => {
+  const [dataList, setDataList] = useState([]);
+  const [dataListTotal, setDataListTotal] = useState([]);
+
+  useEffect(() => {
+    const savedData = JSON.parse(localStorage.getItem("products")) || [];
+    setDataList(savedData);
+
+    const savedDataTotal =
+      JSON.parse(localStorage.getItem("productsTotal")) || [];
+    setDataListTotal(savedDataTotal);
+  }, []);
+
+  const itemsWebsite = dataList.length;
+  const itemsTotal = dataListTotal.length;
+  const itemsDel = itemsTotal - itemsWebsite;
+
+  let totalItems = itemsWebsite >= 2 || itemsWebsite === 0 ? "Items" : "Item";
+  let totalItemsDel = itemsDel >= 2 || itemsDel === 0 ? "Items" : "Item";
+
   return (
     <>
       <article className={styles.wrapperCards}>
@@ -11,9 +31,8 @@ const CardsStock = () => {
           <div className={styles.contentIcon}>
             <IconItems />
           </div>
-          {/* <p className={styles.info}>$ Items</p> */}
           <div className={styles.contentBtn}>
-            <Button variant="text">$ Items</Button>
+            <Button variant="text">{`${itemsWebsite} ${totalItems}`}</Button>
           </div>
           <p>
             <small>Total de productos</small>
@@ -25,7 +44,7 @@ const CardsStock = () => {
           </div>
           <div className={styles.contentBtn}>
             <Button variant="text" color="error">
-              $ Items
+              {`${itemsDel} ${totalItemsDel}`}
             </Button>
           </div>
           <p>

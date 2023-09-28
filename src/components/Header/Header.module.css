@@ -24,6 +24,7 @@
 .header svg {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .wrapper ul li {
@@ -92,5 +93,9 @@
 
   .headerMediaQ {
     display: flex;
+  }
+
+  .headerMediaQ svg {
+    cursor: pointer;
   }
 }

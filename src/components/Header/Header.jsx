@@ -41,7 +41,6 @@ const Header = () => {
 
   const handleOpenMenu = () => setShowMenu(true);
   const handleCloseMenu = () => setShowMenu(false);
-  // console.log(showMenu);
 
   return (
     <>

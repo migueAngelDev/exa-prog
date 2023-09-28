@@ -17,6 +17,7 @@
 }
 
 .sectionInit {
+  margin-top: 80px;
   background-color: #000;
   height: 100vh;
   display: flex;
@@ -175,5 +176,9 @@
 @media (max-width: 1030px) {
   .sectionInfoGen {
     margin: 0;
+  }
+
+  .cardHome {
+    margin-top: 100px;
   }
 }
