@@ -1,0 +1,177 @@
+.wrapperContent {
+  background-color: #f5f6f8;
+  position: absolute;
+  z-index: 1;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+}
+
+.sectionInfoGen {
+  margin-left: 280px;
+}
+
+.sectionInit,
+.sectionSec {
+  padding: 20px;
+}
+
+.sectionInit {
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sectionInit header {
+  color: #fff;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.sectionInit header p {
+  font-size: 2rem;
+  width: 100%;
+  max-width: 700px;
+  line-height: 60px;
+  letter-spacing: 10px;
+  text-wrap: balance;
+}
+
+.wrapperCardHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentInfoImg {
+  height: 100vh;
+  max-height: 450px;
+  padding: 20px;
+  width: 100%;
+  max-width: 700px;
+  background-color: #000000;
+  margin-top: 100px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: rgba(119, 119, 119, 0.73) 0px 1px 3px 0px,
+    rgba(108, 108, 108, 0.752) 0px 1px 2px 0px;
+}
+
+.contentFigure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentFigure img {
+  width: 100%;
+  max-width: 480px;
+  min-width: 160px;
+  height: 100%;
+  max-height: 270px;
+  min-height: 90px;
+}
+
+.contentFigure img,
+.contentFigure {
+  border-radius: 10px;
+}
+
+.txtDescImg {
+  color: #8f8f8f;
+  font-weight: 400;
+  text-align: center;
+  text-wrap: balance;
+  /* margin-top: 15px; */
+}
+
+.btn {
+  padding: 10px;
+}
+
+.btn svg {
+  width: 25px;
+  height: 25px;
+}
+
+.contentBtnStart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 20px; */
+}
+
+/* Section 2 */
+
+.sectionSec {
+  min-height: 100vh;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.wrapperCards {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardImg img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.linkCard {
+  text-decoration: none;
+}
+
+.boxModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 620px;
+  padding: 20px;
+  height: 50vh;
+  max-height: 600px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.boxModal input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.boxModalForm {
+  padding: 10px;
+  height: 90%;
+  /* max-height: 900px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@media (max-width: 1030px) {
+  .sectionInfoGen {
+    margin: 0;
+  }
+}

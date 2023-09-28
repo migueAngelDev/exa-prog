@@ -1,0 +1,62 @@
+.wrapperCards {
+  display: flex;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 350px;
+  min-width: 200px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-around;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.contentBtn button {
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.contentIcon {
+  background-color: #4735e7b9;
+  display: flex;
+  padding: 5px;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentIcon svg {
+  fill: #fff;
+  stroke: #fff;
+  width: 35px;
+  height: 35px;
+}
+
+.add {
+  color: blue;
+  background-color: #7192db07;
+}
+
+.remove {
+  color: red;
+  background-color: #ffe6e67d;
+}
+
+.remove .contentIcon {
+  background-color: #ff0000;
+}
