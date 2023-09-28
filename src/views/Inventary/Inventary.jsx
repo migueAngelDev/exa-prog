@@ -3,6 +3,7 @@ import CardsStock from "@/components/CardsStock/CardsStock";
 import Header from "@/components/Header/Header";
 import WelcomeUser from "@/components/WelcomeUser/WelcomeUser";
 import IconAdd from "../../../public/icons/Add.svg";
+import IconDelete from "../../../public/icons/l.svg";
 import { Box, Button, Modal, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 
@@ -143,12 +144,28 @@ const Inventary = () => {
     }
   };
 
+  const handleOnDelete = (idDel) => {
+    const updateItems = dataList.filter((item) => item.id !== idDel);
+
+    const segure = confirm(
+      `Estás seguro de querer eliminar el dato con el ${idDel}`
+    );
+
+    if (segure) {
+      setDataList(updateItems);
+      localStorage.setItem("products", JSON.stringify(updateItems));
+    }
+  };
+
   const mapData = dataList.map(
     ({ id, product, stockProduct, providerProduct, price }) => {
       return (
         <>
           <li key={id}>
-            <span>{id}</span>
+            <span className={styles.spanIcon}>
+              <IconDelete onClick={() => handleOnDelete(id)} />
+              {id}
+            </span>
             <span>{product}</span>
             <span>{stockProduct}</span>
             <span>{providerProduct}</span>

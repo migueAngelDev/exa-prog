@@ -144,6 +144,20 @@
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
+.spanIcon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.spanIcon svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  fill: red;
+  stroke: red;
+}
+
 @media (max-width: 1030px) {
   .sectionContainerData {
     margin: 0;
