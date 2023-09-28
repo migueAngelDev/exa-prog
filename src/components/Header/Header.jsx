@@ -45,7 +45,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`${styles.headerMediaQ} ${styles.headerMediaQBar}`}>
+      <header className={styles.headerMediaQ}>
         <IconVercel onClick={handleOpenMenu} />
         <h2>Vercel</h2>
       </header>
